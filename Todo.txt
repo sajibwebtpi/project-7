@@ -1,0 +1,94 @@
+
+# Task APP API Development with PHP and MySQL
+
+[এই প্রজেক্টটি করার জন্য এবং জমা দেওয়ার আগে অবশ্যই প্রজেক্টের লাইভ ক্লাসটি দেখুন।]
+
+
+Database Structure:
+
+Database Name: task_api
+
+Table Name: tasks
+
+# tasks Table Structure:
+
+id: INT, AUTO_INCREMENT, PRIMARY KEY
+
+title: VARCHAR(255), NOT NULL
+
+description: TEXT, NULL
+
+priority: ENUM('low', 'medium', 'high'), DEFAULT 'low'
+
+is_completed: TINYINT(1), DEFAULT 0
+
+created_at: TIMESTAMP, DEFAULT CURRENT_TIMESTAMP
+
+updated_at: TIMESTAMP, DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+
+API Features:
+
+GET /tasks
+
+Retrieve all tasks.
+
+Respond with a message if no tasks are available.
+
+GET /tasks/{id}
+
+Retrieve a specific task by its id.
+
+Return 404 if the task does not exist.
+
+POST /tasks
+
+Create a new task.
+
+Required fields: title.
+
+Optional fields: description, priority.
+
+Validate that priority matches one of the following: low, medium, high. If not, return an error.
+
+PUT /tasks/{id}
+
+Update a task by its id.
+
+Fields: title, description, priority, is_completed.
+
+Return 404 if the task does not exist.
+
+DELETE /tasks/{id}
+
+Delete a task by its id.
+
+Return 404 if the task does not exist.
+
+### জমাদানের নির্দেশাবলী:
+
+১. Object-Oriented Programming (OOP) প্যাটার্ন ফলো করে কাজ করতে হবে।
+
+২. একটি নতুন GitHub রিপোজিটরি তৈরি করুন এবং Project ফাইলগুলো রিপোজিটরিতে অন্তর্ভুক্ত করুন।
+
+৩. Database ফাইলটি XAMPP থেকে এক্সপোর্ট করে Project Root Directory-তে যোগ করতে হবে।
+
+৪. শুধুমাত্র GitHub রিপোজিটরি লিঙ্ক জমা দিতে হবে।
+
+৫. ডেডলাইনের পরে আপনার কোডে কোনো পরিবর্তন করা যাবে না।
+
+৬. অ্যাসাইনমেন্ট পেজের Upload File সেকশনে কোনো ফাইল আপলোড করার প্রয়োজন নেই।
+
+
+
+
+
+
+
+
+
+Demo JSON
+{
+    "title": "My Fourth Task",
+    "description": "This is a Fourth task.",
+    "priority": "mediumsss"
+}

@@ -1,0 +1,8 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Api\\": "api/",
+      "Config\\": "config/"
+    }
+  }
+}
